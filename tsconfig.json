@@ -13,12 +13,12 @@
   },
   "tstl": {
     "luaTarget": "5.4",
-   // "buildMode": "library",
-    "luaLibImport": "inline",
+    "buildMode": "default",
+    "luaLibImport": "require",
     "noHeader": true,
     "noImplicitSelf": true,
-    //"luaBundle": "main.lua",
-    //"luaBundleEntry": "main.ts",
+    "luaBundle": "main.lua",
+    "luaBundleEntry": "main.ts",
     "noImplicitGlobalVariables": true
     // "luaPlugins": [
     //  "../plugins/fivem.ts"

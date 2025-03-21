@@ -10,6 +10,7 @@ declare function GetPlayerName(source: number): string
 
 type Hash = number;
 type Vector3 = [number, number, number];
+
 enum ModelTypes
 {
     Automobile = "automobile",
@@ -74,7 +75,7 @@ class Cfx {
     }
 }
 
-class Cfx_World {
+class World {
     static CreateVehicle(modelName: string, modelType: ModelTypes, position: Vector3, heading: number)
     {
         CreateVehicleServerSetter(GetHashKey(modelName), modelType, ...position, heading)
@@ -99,7 +100,7 @@ CreateThread(() => {
 })
 
 names.forEach((car) => {
-    Cfx_World.CreateVehicle(car, ModelTypes.Automobile, defaultSpawn, 0)
+    World.CreateVehicle(car, ModelTypes.Automobile, defaultSpawn, 0)
     print(`Created Vehicle: ${car}`)
 })
 

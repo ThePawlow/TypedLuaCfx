@@ -15,6 +15,5 @@ services:
       # - "40120:40120"
     volumes:
       - "./dist/main.lua:/opt/fivem/server-data/resources/TypedLuaCfx/main.lua"
-      - "./lualib_bundle.lua:/opt/fivem/server-data/resources/TypedLuaCfx/lualib_bundle.lua"
       - "./fxmanifest.lua:/opt/fivem/server-data/resources/TypedLuaCfx/fxmanifest.lua"
       - "./server.cfg:/opt/fivem/server-data/server.cfg"
