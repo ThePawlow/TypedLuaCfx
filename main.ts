@@ -1,4 +1,10 @@
 // Declare exposed API
+// Cfx
+/**
+ * GetHashKey
+ * Use joaat as an built-in alternative
+ * @param name 
+ */
 declare function GetHashKey(name: string): Hash;
 declare function CreateVehicleServerSetter(modelHash: Hash, modelType: string, x: number, y: number, z: number, heading: number): void
 declare function CreateThread(callback: () => void): void;
@@ -7,6 +13,9 @@ declare function AddEventHandler(name: string, callback: (...args: any[]) => voi
 declare function CancelEvent(): void;
 declare function GetCurrentResourceName(): string;
 declare function GetPlayerName(source: number): string
+
+// LuaGLM
+declare function joaat(name: string): Hash
 
 type Hash = number;
 type Vector3 = [number, number, number];
@@ -78,7 +87,7 @@ class Cfx {
 class World {
     static CreateVehicle(modelName: string, modelType: ModelTypes, position: Vector3, heading: number)
     {
-        CreateVehicleServerSetter(GetHashKey(modelName), modelType, ...position, heading)
+        CreateVehicleServerSetter(joaat(modelName), modelType, ...position, heading)
     }
 }
 
