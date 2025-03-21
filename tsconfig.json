@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TypeScriptToLua/TypeScriptToLua/master/tsconfig-schema.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "moduleResolution": "Node",
+    "types": [
+      "lua-types/5.4"
+    ],
+    "strict": true,
+    "outDir": "dist",
+    "skipLibCheck": true
+  },
+  "tstl": {
+    "luaTarget": "5.4",
+   // "buildMode": "library",
+    "luaLibImport": "inline",
+    "noHeader": true,
+    "noImplicitSelf": true,
+    //"luaBundle": "main.lua",
+    //"luaBundleEntry": "main.ts",
+    "noImplicitGlobalVariables": true
+    // "luaPlugins": [
+    //  "../plugins/fivem.ts"
+    //]
+  }
+}

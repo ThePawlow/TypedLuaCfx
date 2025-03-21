@@ -1,0 +1,20 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cfx
+    hostname: cfx
+    restart: always
+    stdin_open: true
+    tty: true
+    ports:
+      - "30120:30120"
+      - "30120:30120/udp"
+      # Allow txAdmin's webserver port to be accessible
+      # - "40120:40120"
+    volumes:
+      - "./dist/main.lua:/opt/fivem/server-data/resources/TypedLuaCfx/main.lua"
+      - "./lualib_bundle.lua:/opt/fivem/server-data/resources/TypedLuaCfx/lualib_bundle.lua"
+      - "./fxmanifest.lua:/opt/fivem/server-data/resources/TypedLuaCfx/fxmanifest.lua"
+      - "./server.cfg:/opt/fivem/server-data/server.cfg"
