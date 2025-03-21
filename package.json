@@ -1,14 +1,14 @@
 {
-  "name": "TypeScript2Lua",
+  "name": "TypedLuaCfx",
   "version": "1.0.0",
   "description": "",
   "main": "main.ts",
   "scripts": {
     "build": "tstl",
-    "dev": "tstl --watch"
+    "watch": "tstl --watch"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["lua", "fivem", "cfx", "typedlua", "luau", "typescript", "framework", "boilerplate"],
+  "author": "ThePawlow <business.shine939@passinbox.com>",
   "license": "ISC",
   "packageManager": "pnpm@10.6.2",
   "devDependencies": {
